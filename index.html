@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game Tebak Angka</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+<style>
+	.hide {
+		display: none;
+	}
+</style>
+
+</head>
+<body>
+
+
+
+<div class="container" align="center">
+<div id="intro">
+<h1>Pilih satu angka antara 1 - 100</h1>
+<h1>Pikirkan atau catat angka tersebut </h1>
+<button class="btn btn-success" onclick="start()">MULAI</button>
+</div>
+<h1 id="soal" class="hide">Apakah angkanya ada di sini?</h1>
+
+<!-- GAMBAR 1 -->
+<div class="hide" id="gm1">
+<div class="container text-center">
+	<div class="row">
+	<div class="col">
+	  <button class="btn btn-primary" value="1" onclick="next1()" id="ada1">Ya, ada</button>
+	</div>
+	<div class="col">
+	  <button class="btn btn-danger" onclick="next1a()">Tidak ada</button>
+	</div>
+	</div>
+</div>
+<br>
+<img src="img/img1.jpg" width="50%" height="50%">
+</div>
+
+<!-- GAMBAR 2 -->
+<div class="hide" id="gm2">
+<div class="container text-center">
+	<div class="row">
+	<div class="col">
+	  <button class="btn btn-primary" value="2" onclick="next2()" id="ada2">Ya, ada</button>
+	</div>
+	<div class="col">
+	  <button class="btn btn-danger" onclick="next2a()">Tidak ada</button>
+	</div>
+	</div>
+</div>
+<br>
+<img src="img/img2.jpg" width="50%" height="50%">
+</div>
+
+<!-- GAMBAR 3 -->
+<div class="hide" id="gm3">
+<div class="container text-center">
+	<div class="row">
+	<div class="col">
+	  <button class="btn btn-primary" value="4" onclick="next3()">Ya, ada</button>
+	</div>
+	<div class="col">
+	  <button class="btn btn-danger" onclick="next3a()">Tidak ada</button>
+	</div>
+	</div>
+</div>
+<br>
+<img src="img/img3.jpg" width="50%" height="50%">
+</div>
+
+<!-- GAMBAR 4 -->
+<div class="hide" id="gm4">
+<div class="container text-center">
+	<div class="row">
+	<div class="col">
+	  <button class="btn btn-primary" value="8" onclick="next4()">Ya, ada</button>
+	</div>
+	<div class="col">
+	  <button class="btn btn-danger" onclick="next4a()">Tidak ada</button>
+	</div>
+	</div>
+</div>
+<br>
+<img src="img/img4.jpg" width="50%" height="50%">
+</div>
+
+<!-- GAMBAR 5 -->
+<div class="hide" id="gm5">
+<div class="container text-center">
+	<div class="row">
+	<div class="col">
+	  <button class="btn btn-primary" value="16" onclick="next5()">Ya, ada</button>
+	</div>
+	<div class="col">
+	  <button class="btn btn-danger" onclick="next5a()">Tidak ada</button>
+	</div>
+	</div>
+</div>
+<br>
+<img src="img/img5.jpg" width="50%" height="50%">
+</div>
+
+<!-- GAMBAR 6 -->
+<div class="hide" id="gm6">
+<div class="container text-center">
+	<div class="row">
+	<div class="col">
+	  <button class="btn btn-primary" value="32" onclick="next6()">Ya, ada</button>
+	</div>
+	<div class="col">
+	  <button class="btn btn-danger" onclick="next6a()">Tidak ada</button>
+	</div>
+	</div>
+</div>
+<br>
+<img src="img/img6.jpg" width="50%" height="50%">
+</div>
+
+<!-- GAMBAR 7 -->
+<div class="hide" id="gm7">
+<div class="container text-center">
+	<div class="row">
+	<div class="col">
+	  <button class="btn btn-primary" value="64" onclick="next7()">Ya, ada</button>
+	</div>
+	<div class="col">
+	  <button class="btn btn-danger" onclick="next7a()">Tidak ada</button>
+	</div>
+	</div>
+</div>
+<br>
+<img src="img/img7.jpg" width="50%" height="50%">
+</div>
+
+<br>
+<h1 id="hasil" class="hide">0</h1>
+<div id="hasil1" class="hide">0</div>
+<div id="hasil2" class="hide">0</div>
+<div id="hasil3" class="hide">0</div>
+<div id="hasil4" class="hide">0</div>
+<div id="hasil5" class="hide">0</div>
+<div id="hasil6" class="hide">0</div>
+<div id="hasil7" class="hide">0</div>
+
+</div>
+
+<script type="text/javascript">
+	function start() {
+		document.getElementById('gm1').setAttribute('class', '');
+		document.getElementById('intro').setAttribute('class', 'hide');
+		document.getElementById('soal').setAttribute('class', '');
+	}
+	function next1() {
+		document.getElementById('gm2').setAttribute('class', '');
+		document.getElementById('gm1').setAttribute('class', 'hide');
+		// var jwb1 = document.getElementById('hasil1').setAttribute('value', + 1);
+		// document.getElementById('hasil1').setAttribute('value', 1);
+		document.getElementById('hasil1').innerHTML = 1;
+	}
+	function next1a() {
+		document.getElementById('gm2').setAttribute('class', '');
+		document.getElementById('gm1').setAttribute('class', 'hide');
+	}
+	function next2() {
+		document.getElementById('gm3').setAttribute('class', '');
+		document.getElementById('gm2').setAttribute('class', 'hide');
+		// var aaa = document.getElementById('hasil1').innerHTML;
+		// document.getElementById('hasil2').setAttribute('value', 2 + 2);
+		document.getElementById('hasil2').innerHTML = 2;
+	}
+	function next2a() {
+		document.getElementById('gm3').setAttribute('class', '');
+		document.getElementById('gm2').setAttribute('class', 'hide');
+	}
+	function next3() {
+		document.getElementById('gm4').setAttribute('class', '');
+		document.getElementById('gm3').setAttribute('class', 'hide');
+		document.getElementById('hasil3').innerHTML = 4;
+	}
+	function next3a() {
+		document.getElementById('gm4').setAttribute('class', '');
+		document.getElementById('gm3').setAttribute('class', 'hide');
+	}
+	function next4() {
+		document.getElementById('gm5').setAttribute('class', '');
+		document.getElementById('gm4').setAttribute('class', 'hide');
+		document.getElementById('hasil4').innerHTML = 8;
+	}
+	function next4a() {
+		document.getElementById('gm5').setAttribute('class', '');
+		document.getElementById('gm4').setAttribute('class', 'hide');
+	}
+	function next5() {
+		document.getElementById('gm6').setAttribute('class', '');
+		document.getElementById('gm5').setAttribute('class', 'hide');
+		document.getElementById('hasil5').innerHTML = 16;
+	}
+	function next5a() {
+		document.getElementById('gm6').setAttribute('class', '');
+		document.getElementById('gm5').setAttribute('class', 'hide');
+	}
+	function next6() {
+		document.getElementById('gm7').setAttribute('class', '');
+		document.getElementById('gm6').setAttribute('class', 'hide');
+		document.getElementById('hasil6').innerHTML = 32;
+	}
+	function next6a() {
+		document.getElementById('gm7').setAttribute('class', '');
+		document.getElementById('gm6').setAttribute('class', 'hide');
+	}
+	function next7() {
+		document.getElementById('gm7').setAttribute('class', 'hide');
+		document.getElementById('soal').setAttribute('class', 'hide');
+		document.getElementById('hasil').setAttribute('class', '');
+		document.getElementById('hasil7').innerHTML = 64;
+	var jwb1 = document.getElementById('hasil1').innerHTML;
+	var jwb2 = document.getElementById('hasil2').innerHTML;
+	var jwb3 = document.getElementById('hasil3').innerHTML;
+	var jwb4 = document.getElementById('hasil4').innerHTML;
+	var jwb5 = document.getElementById('hasil5').innerHTML;
+	var jwb6 = document.getElementById('hasil6').innerHTML;
+	var jwb7 = document.getElementById('hasil7').innerHTML;
+	var hitung = parseInt(jwb1) + parseInt(jwb2) + parseInt(jwb3) + parseInt(jwb4) + parseInt(jwb5) + parseInt(jwb6) + parseInt(jwb7);
+		if (hitung <= 100) {
+			document.getElementById('hasil').innerHTML = "Angka yang kamu pikirkan adalah : <br><br>" + hitung;
+		}
+		else {
+			document.getElementById('hasil').innerHTML = "Sepertinya ada yang salah, ulangi lagi";
+		}
+	// document.getElementById('hasil').innerHTML = "Angka yang kamu pikirkan adalah : <br><br>" + hitung;
+	}
+	function next7a() {
+		document.getElementById('gm7').setAttribute('class', 'hide');
+		document.getElementById('soal').setAttribute('class', 'hide');
+		document.getElementById('hasil').setAttribute('class', '');
+	var jwb1 = document.getElementById('hasil1').innerHTML;
+	var jwb2 = document.getElementById('hasil2').innerHTML;
+	var jwb3 = document.getElementById('hasil3').innerHTML;
+	var jwb4 = document.getElementById('hasil4').innerHTML;
+	var jwb5 = document.getElementById('hasil5').innerHTML;
+	var jwb6 = document.getElementById('hasil6').innerHTML;
+	var jwb7 = document.getElementById('hasil7').innerHTML;
+	var hitung = parseInt(jwb1) + parseInt(jwb2) + parseInt(jwb3) + parseInt(jwb4) + parseInt(jwb5) + parseInt(jwb6) + parseInt(jwb7);
+	if (hitung <= 100) {
+			document.getElementById('hasil').innerHTML = "Angka yang kamu pikirkan adalah : <br><br>" + hitung;
+		}
+		else {
+			document.getElementById('hasil').innerHTML = "Sepertinya ada yang salah, ulangi lagi";
+		}
+	// document.getElementById('hasil').innerHTML = "Angka yang kamu pikirkan adalah : <br><br>" + hitung;
+	}
+</script>
+
+</body>
+</html>
